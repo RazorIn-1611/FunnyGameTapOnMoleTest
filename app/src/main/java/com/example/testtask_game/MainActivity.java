@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             prefEditor.putInt("chronoLock", lock);
             prefEditor.apply();
             if(lock>3){
+                Toast.makeText(this, "Достигнуто максимальное количество игр!", Toast.LENGTH_SHORT).show();
                 finish();
             }
         }else{
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             prefEditor.putInt("chronoLock", lock);
             prefEditor.apply();
             if(lock>3){
+                Toast.makeText(this, "Достигнуто максимальное количество игр!", Toast.LENGTH_SHORT).show();
                 finish();
             }
         }
